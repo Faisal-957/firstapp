@@ -154,7 +154,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -172,7 +172,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     child: Text(
                       'Registerd',
-                      style: style16.copyWith(color: forColor),
+                      style: style16.copyWith(color: Colors.pink),
                     ),
                   ),
                 ],

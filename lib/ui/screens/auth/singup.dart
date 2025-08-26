@@ -3,6 +3,7 @@ import 'package:first_app/core/constants/colors.dart';
 import 'package:first_app/core/constants/strings.dart';
 import 'package:first_app/core/constants/text_style.dart';
 import 'package:first_app/ui/customs_widgets/buttons.dart';
+import 'package:first_app/ui/screens/auth/home_page.dart';
 import 'package:flutter/material.dart';
 
 class Singup extends StatefulWidget {
@@ -142,7 +143,7 @@ class _SingupState extends State<Singup> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Singup()),
+                        MaterialPageRoute(builder: (context) => HomePage()),
                       );
                     },
                     child: Text(

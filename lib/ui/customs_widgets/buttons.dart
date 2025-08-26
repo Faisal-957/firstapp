@@ -27,7 +27,7 @@ class CustomButtons extends StatelessWidget {
       // padding: EdgeInsets.all(20),
       // margin: EdgeInsets.all(25),
       decoration: BoxDecoration(
-        color: blackColor,
+        color: boxColor,
         borderRadius: BorderRadius.circular(8),
       ),
       child: Text(text ?? "", style: style16.copyWith(color: whiteColor)),

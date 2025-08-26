@@ -1,3 +1,3 @@
 String staticAssets = "assets/static_assets";
-String dynamicAssets = "";
+String dynamicAssets = "assets/dynamic_assets";
 String iconsAssets = "assets/icons_assets";

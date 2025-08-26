@@ -1,4 +1,8 @@
-import "package:first_app/ui/screens/splash_screen.dart";
+import "package:first_app/ui/root/root_screen.dart";
+import "package:first_app/ui/screens/auth/category_page.dart";
+import "package:first_app/ui/screens/auth/category_page2.dart";
+import "package:first_app/ui/screens/auth/category_page3.dart";
+
 import "package:flutter/material.dart";
 
 void main() {
@@ -10,6 +14,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: SplashScreen());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: RootScreen());
   }
 }

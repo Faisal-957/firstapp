@@ -31,7 +31,144 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 150),
+
+            Text(textAlign: TextAlign.start, "Categoris", style: style32),
+            SizedBox(
+              height: 200,
+
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      decoration: BoxDecoration(),
+                      height: 110,
+                      width: 100,
+                      child: Column(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(15),
+                            child: Image.asset("$dynamicAssets/pizza.png"),
+                          ),
+                          Text("pizza"),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+            Text("Top rated for you", style: style32),
+            Row(
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    "beauty",
+                    style: style18.copyWith(color: blackColor),
+                  ),
+                ),
+                SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    "jewlary",
+                    style: style18.copyWith(color: blackColor),
+                  ),
+                ),
+                SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    "pizza",
+                    style: style18.copyWith(color: blackColor),
+                  ),
+                ),
+                SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Resturent",
+                    style: style18.copyWith(color: blackColor),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 200,
+
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: Colors.white54,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.3),
+                            offset: const Offset(5, 5),
+                            blurRadius: 10,
+                            spreadRadius: 2,
+                          ),
+                        ],
+                      ),
+                      child: Column(
+                        children: [
+                          ClipRRect(
+                            borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(30),
+                              topRight: Radius.circular(30),
+                            ),
+                            child: Image.asset(
+                              "$dynamicAssets/image.png",
+                              height: 170,
+                              width: double.infinity,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          const SizedBox(height: 5),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text(
+                                "Sardar Ji Cottrelle Blvd",
+                                style: TextStyle(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "20 % OFF",
+                                style: TextStyle(color: Color(0xff4CAD73)),
+                              ),
+                              Text(
+                                "1975 Cottrelle Blvd, Brampton, ON L6P 2Z8 -",
+                                style: TextStyle(fontSize: 8),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

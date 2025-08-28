@@ -60,7 +60,7 @@ class _BottombarState extends State<Bottombar> {
                     ? primeryColor
                     : Colors.transparent,
                 child: Image.asset(
-                  "$iconsAssets/menu.png",
+                  "$iconsAssets/home22.png",
                   scale: 3,
                   color: selectIndex == 0 ? whiteColor : gryColor,
                 ),
@@ -78,7 +78,7 @@ class _BottombarState extends State<Bottombar> {
                     ? primeryColor
                     : Colors.transparent,
                 child: Image.asset(
-                  "$iconsAssets/menu.png",
+                  "$iconsAssets/inactive.png",
                   scale: 3,
                   color: selectIndex == 1 ? whiteColor : gryColor,
                 ),
@@ -123,8 +123,11 @@ class _BottombarState extends State<Bottombar> {
           ],
         ),
       ),
+    );
+  }
+}
 
-      // bottomNavigationBar: BottomNavigationBar(
+ // bottomNavigationBar: BottomNavigationBar(
       //   currentIndex: selectIndex,
       //   // selectedItemColor: Colors.blue,
       //   // unselectedItemColor: blackColor,
@@ -152,6 +155,3 @@ class _BottombarState extends State<Bottombar> {
       //     ),
       //   ],
       // ),
-    );
-  }
-}

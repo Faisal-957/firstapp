@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 150),
+            SizedBox(height: 200),
 
             Text(textAlign: TextAlign.start, "Categoris", style: style32),
             SizedBox(
@@ -67,54 +67,59 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Text("Top rated for you", style: style32),
-            Row(
-              children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    "beauty",
-                    style: style18.copyWith(color: blackColor),
+            SingleChildScrollView(
+              child: Row(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      "beauty",
+                      style: style18.copyWith(color: blackColor),
+                    ),
                   ),
-                ),
-                SizedBox(width: 20),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    "jewlary",
-                    style: style18.copyWith(color: blackColor),
+                  SizedBox(width: 20),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      "jewlary",
+                      style: style18.copyWith(color: blackColor),
+                    ),
                   ),
-                ),
-                SizedBox(width: 20),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    "pizza",
-                    style: style18.copyWith(color: blackColor),
+                  SizedBox(width: 20),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      "pizza",
+                      style: style18.copyWith(color: blackColor),
+                    ),
                   ),
-                ),
-                SizedBox(width: 20),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Resturent",
-                    style: style18.copyWith(color: blackColor),
+                  SizedBox(width: 20),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Resturent",
+                      style: style18.copyWith(color: blackColor),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
+            SizedBox(height: 20),
+
+            ///////////////// large continer
             SizedBox(
               height: 200,
 
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: 10,
+                itemCount: 5,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.white54,
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black.withOpacity(0.3),
@@ -128,13 +133,13 @@ class HomePage extends StatelessWidget {
                         children: [
                           ClipRRect(
                             borderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(30),
-                              topRight: Radius.circular(30),
+                              topLeft: Radius.circular(10),
+                              topRight: Radius.circular(10),
                             ),
                             child: Image.asset(
-                              "$dynamicAssets/image.png",
-                              height: 170,
-                              width: double.infinity,
+                              "$dynamicAssets/face.png",
+                              height: 120,
+                              width: 220,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -143,18 +148,18 @@ class HomePage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: const [
                               Text(
-                                "Sardar Ji Cottrelle Blvd",
+                                "Grace Parlour & Boutique",
                                 style: TextStyle(
                                   fontSize: 10,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               Text(
-                                "20 % OFF",
+                                "25% off Offer Available For 24/7",
                                 style: TextStyle(color: Color(0xff4CAD73)),
                               ),
                               Text(
-                                "1975 Cottrelle Blvd, Brampton, ON L6P 2Z8 -",
+                                "Near Jain Book Shop ( Mahavir Road ) Ahmedgarh War -",
                                 style: TextStyle(fontSize: 8),
                               ),
                             ],
@@ -220,10 +225,10 @@ _header() {
 
 _offer() {
   return Positioned(
-    bottom: -140,
+    bottom: -170,
     child: Container(
-      height: 163,
-      width: 307,
+      height: 200,
+      width: 400,
       alignment: Alignment.center,
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -270,7 +275,7 @@ _offer() {
               topRight: Radius.circular(10),
               bottomRight: Radius.circular(10),
             ),
-            child: Image.asset("$dynamicAssets/img.png", height: 163),
+            child: Image.asset("$dynamicAssets/img.png", height: 200),
           ),
         ],
       ),

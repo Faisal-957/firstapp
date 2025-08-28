@@ -156,31 +156,6 @@ class _CategoryState extends State<Category> {
           ),
         ],
       ),
-
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex:
-            currentindexvalue, // 👈 yahan selected tab ka index aata hai
-        onTap: (index) {
-          // 👈 user ne kaunsa tab click kiya
-          setState(() {
-            currentindexvalue = index; // 👈 update kar dete hain
-          });
-        },
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
-          ), // index = 0
-          BottomNavigationBarItem(
-            icon: Icon(Icons.category),
-            label: "Categories",
-          ), // index = 1
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "Profile",
-          ), // index = 2
-        ],
-      ),
     );
   }
 }
